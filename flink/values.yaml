@@ -4,6 +4,7 @@ imagePullPolicy: Always
 
 ingress:
   enabled: true
+  annotations: {}
   host: <host>
   path: /
 

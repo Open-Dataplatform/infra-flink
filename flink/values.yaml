@@ -2,6 +2,12 @@ image: flink
 imageTag: latest
 imagePullPolicy: Always
 
+ingress:
+  enabled: true
+  host:
+    - <host>
+  path: /
+
 resources:
   jobmanager:
     limits:

@@ -7,6 +7,8 @@ ingress:
   annotations: {}
   host: <host>
   path: /
+  tls:
+    enabled: true
 
 resources:
   jobmanager:

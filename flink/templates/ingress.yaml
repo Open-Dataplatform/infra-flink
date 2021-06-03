@@ -20,8 +20,10 @@ spec:
             port:
               number: 80
 
+{{ if .Values.ingress.tls.enabled }}
   tls:
   - hosts:
     - {{ .Values.ingress.host }}
     secretName: flink-tls
+{{ end }}
 {{ end }}

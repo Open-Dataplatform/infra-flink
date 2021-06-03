@@ -3,9 +3,8 @@ imageTag: latest
 imagePullPolicy: Always
 
 ingress:
-  enabled: false
-  host:
-    - <host>
+  enabled: true
+  host: <host>
   path: /
 
 resources:

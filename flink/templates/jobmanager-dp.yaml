@@ -6,7 +6,8 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ template "fullname" . }}-jobmanager
+      app: {{ template "fullname" . }}
+      component: jobmanager
   template:
     metadata:
       labels:

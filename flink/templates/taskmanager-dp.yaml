@@ -6,7 +6,8 @@ spec:
   replicas: {{ .Values.flink.num_taskmanagers }}
   selector:
     matchLabels:
-      app: {{ template "fullname" . }}-taskmanager
+      app: {{ template "fullname" . }}
+      component: taskmanager
   template:
     metadata:
       labels:

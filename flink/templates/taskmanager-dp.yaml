@@ -40,8 +40,8 @@ spec:
         - name: {{ template "fullname" . }}-flink-config
           configMap:
             name: {{ template "fullname" . }}-flink-config
-						items:
-						- key: flink-conf.yaml
-							path: flink-conf.yaml
-						- key: log4j-console.properties
-							path: log4j-console.properties
+            items:
+            - key: flink-conf.yaml
+              path: flink-conf.yaml
+            - key: log4j-console.properties
+              path: log4j-console.properties

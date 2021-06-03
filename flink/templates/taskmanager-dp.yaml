@@ -4,6 +4,9 @@ metadata:
   name: {{ template "fullname" . }}-taskmanager
 spec:
   replicas: {{ .Values.flink.num_taskmanagers }}
+  selector:
+    matchLabels:
+      app: {{ template "fullname" . }}-taskmanager
   template:
     metadata:
       labels:

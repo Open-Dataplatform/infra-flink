@@ -19,4 +19,9 @@ spec:
             name: {{ template "fullname" . }}-jobmanager
             port:
               number: 80
+
+  tls:
+  - hosts:
+    - {{ .Values.ingress.host }}
+    secretName: flink-tls
 {{ end }}

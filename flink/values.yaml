@@ -27,7 +27,7 @@ resources:
 flink:
   jobmanager_heap_mb: 1024
   taskmanager_heap_mb: 1024
-  num_taskmanagers: 1
+  num_taskmanagers: 2
   num_slots_per_taskmanager: 2
 
   ## Other config options for flink-conf.yaml

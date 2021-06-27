@@ -20,9 +20,9 @@ resources:
       memory: 1280Mi
   taskmanager:
     limits:
-      memory: 1280Mi
+      memory: 2048Mi
     requests:
-      memory: 1280Mi
+      memory: 2048Mi
 
 flink:
   jobmanager_heap_mb: 1024

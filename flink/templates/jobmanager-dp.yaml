@@ -16,6 +16,10 @@ spec:
         app: {{ template "fullname" . }}
         component: jobmanager
     spec:
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
       - name: jobmanager
         image: {{ .Values.image }}:{{ .Values.imageTag }}

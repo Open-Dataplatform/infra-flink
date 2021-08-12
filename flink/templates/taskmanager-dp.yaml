@@ -16,6 +16,10 @@ spec:
         app: {{ template "fullname" . }}
         component: taskmanager
     spec:
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
       - name: taskmanager
         image: {{ .Values.image }}:{{ .Values.imageTag }}
